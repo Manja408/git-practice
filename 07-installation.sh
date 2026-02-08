@@ -9,12 +9,12 @@ then
     exit 1
 fi
 
-dnf install mysqld
+dnf install mysql
 
 if($? -ne 0)
 then
     echo "MYSQL is not installed"
-    dnf install mysqld
+    dnf install mysql
 else
     echo"Already isntalled,nothing to do"
 fi
