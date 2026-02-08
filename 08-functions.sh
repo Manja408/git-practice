@@ -7,7 +7,7 @@ VALIDATE(){
     then 
         echo "$2 is ...FAILED"
     else
-        echo "$3 is ...success"
+        echo "$2 is ...success"
     fi
 }
 
@@ -23,7 +23,7 @@ if [ $? -ne 0 ]
 then
     echo "MYSQL is not installed....going to install"
     dnf install git -y
-    VALIDATE $? "installing Mysql"
+    VALIDATE $? "installing git"
 else
     echo "Already isntalled,nothing to do"
 fi
