@@ -19,7 +19,7 @@ fi
 
 dnf list installed git
 
-if($? -ne 0)
+if [$? -ne 0]
 then
     echo "MYSQL is not installed....going to install"
     dnf install git -y
@@ -30,7 +30,7 @@ fi
 
 dnf list installed mysql
 
-if($? -ne 0)
+if [$? -ne 0]
 then
     echo "MYSQL is not installed....going to install"
     dnf install mysql -y
