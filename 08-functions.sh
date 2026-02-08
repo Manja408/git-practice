@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 USERID= $(id -u)
 
@@ -11,7 +11,7 @@ VALIDATE(){
     fi
 }
 
-if [$USERID -ne 0 ]
+if [  $USERID -ne 0 ]
 then    
     echo "please run this script with preveleges"
     exit 1
