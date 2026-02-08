@@ -7,3 +7,5 @@ if[$USERID -ne 0]
 then
     echo "Please run this script with root privaleges"
 fi
+
+dnf install mysql
