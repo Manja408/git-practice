@@ -3,7 +3,7 @@
 USERID=$(id -u)
 
 VALIDATE(){
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then 
         echo "$2 is ...FAILED"
     else
@@ -11,7 +11,7 @@ VALIDATE(){
     fi
 }
 
-if [  $USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then    
     echo "please run this script with preveleges"
     exit 1
@@ -19,7 +19,7 @@ fi
 
 dnf list installed git
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then
     echo "MYSQL is not installed....going to install"
     dnf install git -y
@@ -30,7 +30,7 @@ fi
 
 dnf list installed mysql
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then
     echo "MYSQL is not installed....going to install"
     dnf install mysql -y
