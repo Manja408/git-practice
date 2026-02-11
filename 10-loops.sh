@@ -27,7 +27,7 @@ CHECK_ROOT
 
 for packages in $@ #@refres to all arguments passes to fi
 do
-    dnf list inatlled $package
+    dnf list installed $package
     if [ $? -ne 0 ]
     then
         echo "$package is not inatalled,going to install it.."
