@@ -25,7 +25,7 @@ CHECK_ROOT(){
 CHECK_ROOT
 
 
-for packages in $@ #@refres to all arguments passes to fi
+for package in $@ #@refres to all arguments passes to fi
 do
     dnf list installed $package
     if [ $? -ne 0 ]
