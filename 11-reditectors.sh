@@ -27,9 +27,18 @@ CHECK_ROOT(){
      fi
 }
 
+USAGE(){
+    echo --e  "USAGE:: sudo sh 11-reirector.sh package1 package2 .."
+    exit 1
+}
 
+echo "Script started executing at :$date"
 CHECK_ROOT
 
+if [ $# -eq 0 ]
+then
+    USAGE
+fi 
 
 for package in $@ #@refres to all arguments passes to fi
 do
@@ -40,6 +49,6 @@ do
     dnf install $package -y
     VALIDATE $? "installing $package"
     else
-        echo "$package is already installed..nothing to do" &>>$LOG_FILE
+        echo -e "$package is already installed..nothing to do" &>>$LOG_FILE
     fi
 done
